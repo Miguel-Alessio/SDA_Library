@@ -1,0 +1,21 @@
+# Executabile (Windows & Linux)
+*.exe
+*.out
+*.app
+
+# Fișiere obiect și biblioteci
+*.o
+*.obj
+*.a
+*.lib
+
+# Foldere create de IDE-uri (VS Code, Visual Studio, CLion)
+.vscode/
+.vs/
+out/
+build/
+bin/
+
+# Fișiere de sistem
+.DS_Store
+Thumbs.db
