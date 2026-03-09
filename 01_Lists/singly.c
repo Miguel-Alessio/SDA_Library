@@ -26,7 +26,7 @@ void printList(Node* head) {
     printf("NULL\n");
 }
 
-void pop(Node** head,int val){
+int pop(Node** head,int val){
     if(*head==NULL)return -1;
     Node* temp=*head;
     int val= temp->data;
