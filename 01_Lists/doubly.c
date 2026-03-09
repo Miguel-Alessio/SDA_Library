@@ -31,3 +31,26 @@ void printListD(DNode* head) {
     }
     printf(" -> NULL\n");
 }
+
+int popD(DNode** head){
+    if(*head==NULL)return -1;
+
+    DNode* temp=*head;
+
+    if(temp->next==NULL){
+        int val=temp->data;
+        free(temp);
+        *head=NULL;
+        return val;
+    }
+
+    while(temp->next!=NULL){
+        temp=temp->next;
+    }
+
+    int val=temp->data;
+
+    temp->prev->next=NULL;
+    free(temp);
+    return val;
+}
