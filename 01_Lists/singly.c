@@ -26,13 +26,19 @@ void printList(Node* head) {
     printf("NULL\n");
 }
 
-int pop(Node** head,int val){
-    if(*head==NULL)return -1;
-    Node* temp=*head;
-    int val= temp->data;
-    *head=(*head)->next;
-
+int pop(Node** head) {
+    if (*head == NULL) return -1;
+    Node* temp = *head;
+    int data = temp->data;
+    *head = (*head)->next;
     free(temp);
-    return val;
+    return data;
+}
 
+void freeSList(Node *head) {
+    while (head) {
+        Node *temp = head;
+        head = head->next;
+        free(temp);
+    }
 }
